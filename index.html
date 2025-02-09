@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function displayUserName() {
+            var name = document.getElementById("userName").value;
+            document.getElementById("output").innerText = "Hello, " + name + "!";
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>CGPA Calculator</h1>
+        <h3>ECE 2022-2026</h3>
+        <center>
+            <h4 style="margin: 1px 0;">Enter Your Name</h4><input type="text" id="userName" placeholder="   Your name!"
+                oninput="displayUserName()" required
+                style="background-color: black;color: white;border: 1px solid #ccc; padding: 5px; font-size: 15px; width: 200px; margin: 10px 0;border-radius: 5px;">
+        </center>
+
+        <!-- Semester 1 -->
+        <section class="semester-section">
+            <h2>Semester 1</h2>
+            <form id="semester1">
+                <label for="english1">English</label>
+                <select id="english1">
+                    <option value="10">O</option>
+                    <option value="9">A+</option>
+                    <option value="8">A</option>
+                    <option value="7">B+</option>
+                    <option value="6">B</option>
+                    <option value="5">C</option>
+                    <option value="0">U</option>
+                </select>
+                <label for="maths1">Maths</label>
+                <select id="maths1">
+                    <option value="10">O</option>
+                    <option value="9">A+</option>
+                    <option value="8">A</option>
+                    <option value="7">B+</option>
+                    <option value="6">B</option>
+                    <option value="5">C</option>
+                    <option value="0">U</option>
+                </select>
+                <label for="physics1">Physics</label>
+                <select id="physics1">
+                    <option value="10">O</option>
+                    <option value="9">A+</option>
+                    <option value="8">A</option>
+                    <option value="7">B+</option>
+                    <option value="6">B</option>
+                    <option value="5">C</option>
+                    <option value="0">U</option>
+                </select>
+                <label for="chemistry1">Chemistry</label>
+                <select id="chemistry1">
+                    <option value="10">O</option>
+                    <option value="9">A+</option>
+                    <option value="8">A</option>
+                    <option value="7">B+</option>
+                    <option value="6">B</option>
+                    <option value="5">C</option>
+                    <option value="0">U</option>
+                </select>
+                <label for="python1">Python</label>
+                <select id="python1">
+                    <option value="10">O</option>
+                    <option value="9">A+</option>
+                    <option value="8">A</option>
+                    <option value="7">B+</option>
+                    <option value="6">B</option>
+                    <option value="5">C</option>
+                    <option value="0">U</option>
+                </select>
+                <label for="pythonlab1">Python Lab</label>
+                <select id="pythonlab1">
+                    <option value="10">O</option>
+                    <option value="9">A+</option>
+                    <option value="8">A</option>
+                    <option value="7">B+</option>
+                    <option value="6">B</option>
+                    <option value="5">C</option>
+                    <option value="0">U</option>
+                </select>
+                <label for="physchemLab1">Physics/Chemistry Lab</label>
+                <select id="physchemLab1">
+                    <option value="10">O</option>
+                    <option value="9">A+</option>
+                    <option value="8">A</option>
+                    <option value="7">B+</option>
+                    <option value="6">B</option>
+                    <option value="5">C</option>
+                    <option value="0">U</option>
+                </select>
+                <button type="button" id="calculateSemester1">Calculate Semester 1 GPA</button>
+                <p id="result1"></p>
+            </form>
+        </section>
+
+        <!-- Semester 2 -->
+        <section class="semester-section">
+            <h2>Semester 2</h2>
+            <form id="semester2">
+                <label for="english2">English II</label>
+                <select id="english2">
+                    <option value="10">O</option>
+                    <option value="9">A+</option>
+                    <option value="8">A</option>
+                    <option value="7">B+</option>
+                    <option value="6">B</option>
+                    <option value="5">C</option>
+                    <option value="0">U</option>
+                </select>
+                <label for="tamil1">Tamil I</label>
+                <select id="tamil1">
+                    <option value="10">O</option>
+                    <option value="9">A+</option>
+                    <option value="8">A</option>
+                    <option value="7">B+</option>
+                    <option value="6">B</option>
+                    <option value="5">C</option>
+                    <option value="0">U</option>
+                </select>
+                <label for="maths2">Maths II</label>
+                <select id="maths2">
+                    <option value="10">O</option>
+                    <option value="9">A+</option>
+                    <option value="8">A</option>
+                    <option value="7">B+</option>
+                    <option value="6">B</option>
+                    <option value="5">C</option>
+                    <option value="0">U</option>
+                </select>
+                <label for="physics2">Physics II</label>
+                <select id="physics2">
+                    <option value="10">O</option>
+                    <option value="9">A+</option>
+                    <option value="8">A</option>
+                    <option value="7">B+</option>
+                    <option value="6">B</option>
+                    <option value="5">C</option>
+                    <option value="0">U</option>
+                </select>
+                <label for="eg2">EG</label>
+                <select id="eg2">
+                    <option value="10">O</option>
+                    <option value="9">A+</option>
+                    <option value="8">A</option>
+                    <option value="7">B+</option>
+                    <option value="6">B</option>
+                    <option value="5">C</option>
+                    <option value="0">U</option>
+                </select>
+                <label for="fee2">FEE</label>
+                <select id="fee2">
+                    <option value="10">O</option>
+                    <option value="9">A+</option>
+                    <option value="8">A</option>
+                    <option value="7">B+</option>
+                    <option value="6">B</option>
+                    <option value="5">C</option>
+                    <option value="0">U</option>
+                </select>
+                <label for="ca2">Circuit Analysis</label>
+                <select id="ca2">
+                    <option value="10">O</option>
+                    <option value="9">A+</option>
+                    <option value="8">A</option>
+                    <option value="7">B+</option>
+                    <option value="6">B</option>
+                    <option value="5">C</option>
+                    <option value="0">U</option>
+                </select>
+                <label for="epllab2">EPL Lab</label>
+                <select id="epllab2">
+                    <option value="10">O</option>
+                    <option value="9">A+</option>
+                    <option value="8">A</option>
+                    <option value="7">B+</option>
+                    <option value="6">B</option>
+                    <option value="5">C</option>
+                    <option value="0">U</option>
+                </select>
+                <label for="calab2">Circuit Analysis Lab</label>
+                <select id="calab2">
+                    <option value="10">O</option>
+                    <option value="9">A+</option>
+                    <option value="8">A</option>
+                    <option value="7">B+</option>
+                    <option value="6">B</option>
+                    <option value="5">C</option>
+                    <option value="0">U</option>
+                </select>
+                <label for="englishlab2">English Lab</label>
+                <select id="englishlab2">
+                    <option value="10">O</option>
+                    <option value="9">A+</option>
+                    <option value="8">A</option>
+                    <option value="7">B+</option>
+                    <option value="6">B</option>
+                    <option value="5">C</option>
+                    <option value="0">U</option>
+                </select>
+                <button type="button" id="calculateSemester2">Calculate Semester 2 GPA</button>
+                <p id="result2"></p>
+            </form>
+        </section>
+
+        <!-- Semester 3 -->
+        <section class="semester-section">
+            <h2>Semester 3</h2>
+            <form id="semester3">
+                <label for="maths3">Maths III</label>
+                <select id="maths3">
+                    <option value="10">O</option>
+                    <option value="9">A+</option>
+                    <option value="8">A</option>
+                    <option value="7">B+</option>
+                    <option value="6">B</option>
+                    <option value="5">C</option>
+                    <option value="0">U</option>
+                </select>
+                <label for="tamil2">Tamil II</label>
+                <select id="tamil2">
+                    <option value="10">O</option>
+                    <option value="9">A+</option>
+                    <option value="8">A</option>
+                    <option value="7">B+</option>
+                    <option value="6">B</option>
+                    <option value="5">C</option>
+                    <option value="0">U</option>
+                </select>
+                <label for="cprogram3">C Program</label>
+                <select id="cprogram3">
+                    <option value="10">O</option>
+                    <option value="9">A+</option>
+                    <option value="8">A</option>
+                    <option value="7">B+</option>
+                    <option value="6">B</option>
+                    <option value="5">C</option>
+                    <option value="0">U</option>
+                </select>
+                <label for="ss3">SS</label>
+                <select id="ss3">
+                    <option value="10">O</option>
+                    <option value="9">A+</option>
+                    <option value="8">A</option>
+                    <option value="7">B+</option>
+                    <option value="6">B</option>
+                    <option value="5">C</option>
+                    <option value="0">U</option>
+                </select>
+                <label for="edc3">EDC</label>
+                <select id="edc3">
+                    <option value="10">O</option>
+                    <option value="9">A+</option>
+                    <option value="8">A</option>
+                    <option value="7">B+</option>
+                    <option value="6">B</option>
+                    <option value="5">C</option>
+                    <option value="0">U</option>
+                </select>
+                <label for="ca3">C&A</label>
+                <select id="ca3">
+                    <option value="10">O</option>
+                    <option value="9">A+</option>
+                    <option value="8">A</option>
+                    <option value="7">B+</option>
+                    <option value="6">B</option>
+                    <option value="5">C</option>
+                    <option value="0">U</option>
+                </select>
+                <label for="dsd3">DSD</label>
+                <select id="dsd3">
+                    <option value="10">O</option>
+                    <option value="9">A+</option>
+                    <option value="8">A</option>
+                    <option value="7">B+</option>
+                    <option value="6">B</option>
+                    <option value="5">C</option>
+                    <option value="0">U</option>
+                </select>
+                <label for="edclab3">EDC Lab</label>
+                <select id="edclab3">
+                    <option value="10">O</option>
+                    <option value="9">A+</option>
+                    <option value="8">A</option>
+                    <option value="7">B+</option>
+                    <option value="6">B</option>
+                    <option value="5">C</option>
+                    <option value="0">U</option>
+                </select>
+                <label for="cplab3">C Program Lab</label>
+                <select id="cplab3">
+                    <option value="10">O</option>
+                    <option value="9">A+</option>
+                    <option value="8">A</option>
+                    <option value="7">B+</option>
+                    <option value="6">B</option>
+                    <option value="5">C</option>
+                    <option value="0">U</option>
+                </select>
+                <label for="pdlab3">PD Lab</label>
+                <select id="pdlab3">
+                    <option value="10">O</option>
+                    <option value="9">A+</option>
+                    <option value="8">A</option>
+                    <option value="7">B+</option>
+                    <option value="6">B</option>
+                    <option value="5">C</option>
+                    <option value="0">U</option>
+                </select>
+                <button type="button" id="calculateSemester3">Calculate Semester 3 GPA</button>
+                <p id="result3"></p>
+            </form>
+        </section>
+
+        <!-- Semester 4 -->
+        <section class="semester-section">
+            <h2>Semester 4</h2>
+            <form id="semester4">
+                <label for="emt4">EMT</label>
+                <select id="emt4">
+                    <option value="10">O</option>
+                    <option value="9">A+</option>
+                    <option value="8">A</option>
+                    <option value="7">B+</option>
+                    <option value="6">B</option>
+                    <option value="5">C</option>
+                    <option value="0">U</option>
+                </select>
+                <label for="ns4">NS</label>
+                <select id="ns4">
+                    <option value="10">O</option>
+                    <option value="9">A+</option>
+                    <option value="8">A</option>
+                    <option value="7">B+</option>
+                    <option value="6">B</option>
+                    <option value="5">C</option>
+                    <option value="0">U</option>
+                </select>
+                <label for="lic4">LIC</label>
+                <select id="lic4">
+                    <option value="10">O</option>
+                    <option value="9">A+</option>
+                    <option value="8">A</option>
+                    <option value="7">B+</option>
+                    <option value="6">B</option>
+                    <option value="5">C</option>
+                    <option value="0">U</option>
+                </select>
+                <label for="dsp4">DSP</label>
+                <select id="dsp4">
+                    <option value="10">O</option>
+                    <option value="9">A+</option>
+                    <option value="8">A</option>
+                    <option value="7">B+</option>
+                    <option value="6">B</option>
+                    <option value="5">C</option>
+                    <option value="0">U</option>
+                </select>
+                <label for="cs4">CS</label>
+                <select id="cs4">
+                    <option value="10">O</option>
+                    <option value="9">A+</option>
+                    <option value="8">A</option>
+                    <option value="7">B+</option>
+                    <option value="6">B</option>
+                    <option value="5">C</option>
+                    <option value="0">U</option>
+                </select>
+                <label for="ess4">ESS</label>
+                <select id="ess4">
+                    <option value="10">O</option>
+                    <option value="9">A+</option>
+                    <option value="8">A</option>
+                    <option value="7">B+</option>
+                    <option value="6">B</option>
+                    <option value="5">C</option>
+                    <option value="0">U</option>
+                </select>
+                <label for="cslab4">CS Lab</label>
+                <select id="cslab4">
+                    <option value="10">O</option>
+                    <option value="9">A+</option>
+                    <option value="8">A</option>
+                    <option value="7">B+</option>
+                    <option value="6">B</option>
+                    <option value="5">C</option>
+                    <option value="0">U</option>
+                </select>
+                <label for="liclab4">LIC Lab</label>
+                <select id="liclab4">
+                    <option value="10">O</option>
+                    <option value="9">A+</option>
+                    <option value="8">A</option>
+                    <option value="7">B+</option>
+                    <option value="6">B</option>
+                    <option value="5">C</option>
+                    <option value="0">U</option>
+                </select>
+                <button type="button" id="calculateSemester4">Calculate Semester 4 GPA</button>
+                <p id="result4"></p>
+            </form>
+        </section>
+        <!-- semester 5: -->
+        <section class="semester-section">
+            <h2>Semester 5</h2>
+            <form id="semester5">
+                <label for="tlrf">TLRF</label>
+                <select id="tlrf">
+                    <option value="10">O</option>
+                    <option value="9">A+</option>
+                    <option value="8">A</option>
+                    <option value="7">B+</option>
+                    <option value="6">B</option>
+                    <option value="5">C</option>
+                    <option value="0">U</option>
+                </select>
+                <label for="vlsi">VLSI</label>
+                <select id="vlsi">
+                    <option value="10">O</option>
+                    <option value="9">A+</option>
+                    <option value="8">A</option>
+                    <option value="7">B+</option>
+                    <option value="6">B</option>
+                    <option value="5">C</option>
+                    <option value="0">U</option>
+                </select>
+                <label for="wc">WC</label>
+                <select id="wc">
+                    <option value="10">O</option>
+                    <option value="9">A+</option>
+                    <option value="8">A</option>
+                    <option value="7">B+</option>
+                    <option value="6">B</option>
+                    <option value="5">C</option>
+                    <option value="0">U</option>
+                </select>
+                <label for="pe11">Professional Elective I (Common credit for all subjects)</label>
+                <select id="pe11">
+                    <option value="10">O</option>
+                    <option value="9">A+</option>
+                    <option value="8">A</option>
+                    <option value="7">B+</option>
+                    <option value="6">B</option>
+                    <option value="5">C</option>
+                    <option value="0">U</option>
+                </select>
+                <label for="pe12">Professional Elective II</label>
+                <select id="pe12">
+                    <option value="10">O</option>
+                    <option value="9">A+</option>
+                    <option value="8">A</option>
+                    <option value="7">B+</option>
+                    <option value="6">B</option>
+                    <option value="5">C</option>
+                    <option value="0">U</option>
+                </select>
+                <label for="pe13">Professional Elective III</label>
+                <select id="pe13">
+                    <option value="10">O</option>
+                    <option value="9">A+</option>
+                    <option value="8">A</option>
+                    <option value="7">B+</option>
+                    <option value="6">B</option>
+                    <option value="5">C</option>
+                    <option value="0">U</option>
+                </select>
+                <label for="vlsilab">VLSI Lab</label>
+                <select id="vlsilab">
+                    <option value="10">O</option>
+                    <option value="9">A+</option>
+                    <option value="8">A</option>
+                    <option value="7">B+</option>
+                    <option value="6">B</option>
+                    <option value="5">C</option>
+                    <option value="0">U</option>
+                </select>
+                <button type="button" id="calculateSemester5">Calculate Semester 5 GPA</button>
+                <p id="result5"></p>
+            </form>
+        </section>
+
+
+
+        <center><button type="button" id="calculateAverage">Calculate Average CGPA (Upto 5th sem) </button>
+            <p id="output"></p>
+            <p id="averageResult"></p>
+        </center>
+        <br>
+        <br>
+        <h3>Designed by Sugan Raj</h3>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
